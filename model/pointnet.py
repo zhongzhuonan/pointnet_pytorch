@@ -80,7 +80,7 @@ class PointNet(nn.Module):
 
 def main():
     sim_data=torch.rand(5,3,2048).to(device)
-    root = r'/home/zzn/Documents/ModelNet40_ply'
+    root = r'/home/sirb/Documents/ModelNet40_ply'
     train_data = ModelNet40(root,sample_points=1024,split='train')
     train_loader=torch.utils.data.DataLoader(train_data,batch_size=10,shuffle=True,num_workers=4)
     Net=PointNet().to(device)
